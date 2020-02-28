@@ -1,0 +1,83 @@
+$blue-gradient: linear-gradient(90deg, rgba(24,155,166,1) 0%, rgba(70,255,225,1) 47%, rgba(163,248,255,1) 100%);
+$body-background: linear-gradient(90deg, rgba(255,225,157,1) 0%, rgba(255,245,175,1) 53%, rgba(255,243,203,1) 100%);
+$green-gradient: linear-gradient(90deg, rgba(21,105,0,1) 0%, rgba(1,189,8,1) 53%, rgba(101,255,0,1) 100%);
+$red-gradient: linear-gradient(90deg, rgba(147,3,3,1) 0%, rgba(198,15,1,1) 46%, rgba(255,44,0,1) 100%);
+
+#headerLogo {
+    width: auto;
+    max-width: 125px;
+}
+
+.jumbotron {
+    background: $red-gradient;
+}
+
+#headerStripe {
+    background: $green-gradient;
+}
+
+body {
+    font-family: 'Roboto', ;
+    background: $body-background;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Bree Serif', ;
+}
+
+.vegan {
+    background: $green-gradient;
+}
+
+.vegetarian {
+    background: $green-gradient;
+}
+
+.meat {
+    background: $red-gradient;
+}
+
+.seafood {
+    background: $blue-gradient;
+}
+
+// Media Queries
+@media (min-width:356px) {
+    .card-columns {
+      column-count: 1;
+    }
+}
+
+@media (min-width:576px) {
+    .card-columns {
+      column-count: 1;
+    }
+}
+  @media (min-width:768px) {
+    .card-columns {
+      column-count: 2;
+    }
+
+    #headerLogo {
+        position: relative;
+        top: 40px;
+        z-index: 1000;
+        width: auto;
+        max-width: 100%;
+    }
+    .carousel-item {
+        img {
+            max-height: 800px;
+        }
+    }
+}
+@media (min-width:992px) {
+    .card-columns {
+      column-count: 3;
+    }
+}
+@media (min-width:1200px) {
+    .card-columns {
+      column-count: 3;
+    }
+}

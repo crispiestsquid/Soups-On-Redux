@@ -1,0 +1,56 @@
+#headerLogo {
+  width: auto;
+  max-width: 125px; }
+
+.jumbotron {
+  background: linear-gradient(90deg, #930303 0%, #c60f01 46%, #ff2c00 100%); }
+
+#headerStripe {
+  background: linear-gradient(90deg, #156900 0%, #01bd08 53%, #65ff00 100%); }
+
+body {
+  font-family: "Roboto";
+  background: linear-gradient(90deg, #ffe19d 0%, #fff5af 53%, #fff3cb 100%); }
+
+h1, h2, h3, h4 {
+  font-family: "Bree Serif"; }
+
+.vegan {
+  background: linear-gradient(90deg, #156900 0%, #01bd08 53%, #65ff00 100%); }
+
+.vegetarian {
+  background: linear-gradient(90deg, #156900 0%, #01bd08 53%, #65ff00 100%); }
+
+.meat {
+  background: linear-gradient(90deg, #930303 0%, #c60f01 46%, #ff2c00 100%); }
+
+.seafood {
+  background: linear-gradient(90deg, #189ba6 0%, #46ffe1 47%, #a3f8ff 100%); }
+
+@media (min-width: 356px) {
+  .card-columns {
+    column-count: 1; } }
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 1; } }
+
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 2; }
+  #headerLogo {
+    position: relative;
+    top: 40px;
+    z-index: 1000;
+    width: auto;
+    max-width: 100%; }
+  .carousel-item img {
+    max-height: 800px; } }
+
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 3; } }
+
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 3; } }

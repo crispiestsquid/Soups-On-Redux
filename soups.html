@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Required meta tags always come first-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- endbuild -->
+    <script src="https://kit.fontawesome.com/cc18a87a32.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Roboto:400&display=swap" rel="stylesheet">
+
+
+    <title>Soup's On Redux</title>
+</head>
+
+<body>
+
+    <header class="jumbotron jumbotron-fluid pt-0 pb-1 mb-0 border-bottom border-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="headerStripe" class="col p-3 m-0 border-bottom border-dark">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col offset-1">
+                    <img class="img-fluid" id="headerLogo" src="img/soupsontrans.png" alt="soups on">
+                </div>
+                <div class="col float-right float-md-none align-self-end">
+                    <nav class="navbar navbar-dark navbar-expand-md">
+                        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                            data-target="#soupsonNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse text-right" id="soupsonNavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" href="index.html">
+                                        <h4>Home</h4>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link active dropdown-toggle" href="#" id="menuDropdown" role="button"
+                                        data-toggle="dropdown">
+                                        <h4 class="d-inline">Menu</h4>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item active" href="#">Soups</a>
+                                        <a class="dropdown-item" href="salads.html">Salads</a>
+                                        <a class="dropdown-item" href="sandwiches.html">Sandwiches</a>
+                                        <a class="dropdown-item" href="#">Deserts</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="#">
+                                        <h4>About</h4>
+                                    </a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">
+                                        <h4>Contact</h4>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="pt-3">
+            <ul class="nav nav-tabs justify-content-center" id="soupTabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" id="daily-tab" href="#daily"
+                        role="tab">
+                        <h4>Daily</h4>
+                    </a>
+                </li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" id="vegan-tab" href="#vegan" role="tab">
+                        <h4>Vegan</h4>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" id="vegetarian-tab" href="#vegetarian"
+                        role="tab">
+                        <h4>Vegetarian</h4>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" id="meat-tab" href="#meat" role="tab">
+                        <h4>Meat</h4>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" id="seafood-tab" href="#seafood" role="tab">
+                        <h4>Seafood</h4>
+                    </a></li>
+            </ul>
+            <div class="tab-content pt-4" id="soupTabsContent">
+                <div class="tab-pane show active fade" id="daily" role="tabpanel">
+                    <div class="card-columns">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/African-Peanut-Soup-34.jpg"
+                                alt="African Peanut">
+                            <div class="card-body">
+                                <h4 class="card-title">African Peanut</h4>
+                                <p class="card-text">This authentic West African peanut soup recipe is made with simple ingredients like peanut butter and tomato paste.</p>
+                            </div>
+                            <div class="card-footer vegan text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-leaf"></i> Vegan</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/Healthy-Cream-of-Tomato-Soup.jpg"
+                                alt="Tomato Soup">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Tomato w/Mascarpone Cheese</h4>
+                                <p class="card-text">Juicy-ripe tomatoes, caramelized onions, basil, sea salt and a touch of parmesan and romano cheeses blended with light cream.</p>
+                            </div>
+                            <div class="card-footer vegetarian text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-carrot"></i> Vegetarian</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/tibetan-beef.jpeg"
+                                alt="Tibetan Beef">
+                            <div class="card-body">
+                                <h4 class="card-title">Tibetan Beef w/Blue Cheese, Tomato, Jalapeño &amp; Brown Rice</h4>
+                                <p class="card-text">Good luck finding a description for this haha.</p>
+                            </div>
+                            <div class="card-footer meat text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-drumstick-bite"></i> Meat</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/cream-of-crab.jpg"
+                                alt="Cream of Crab">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Crab</h4>
+                                <p class="card-text">This rich and delicately seasoned soup is impressive with its delectable morsels of crabmeat.</p>
+                            </div>
+                            <div class="card-footer seafood text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-fish"></i> Seafood</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/cream-of-crab.jpg"
+                                alt="Cream of Crab">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Crab</h4>
+                                <p class="card-text">This rich and delicately seasoned soup is impressive with its delectable morsels of crabmeat.</p>
+                            </div>
+                            <div class="card-footer seafood text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-fish"></i> Seafood</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/African-Peanut-Soup-34.jpg"
+                                alt="African Peanut">
+                            <div class="card-body">
+                                <h4 class="card-title">African Peanut</h4>
+                                <p class="card-text">This authentic West African peanut soup recipe is made with simple ingredients like peanut butter and tomato paste.</p>
+                            </div>
+                            <div class="card-footer vegan text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-leaf"></i> Vegan</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/tibetan-beef.jpeg"
+                                alt="Tibetan Beef">
+                            <div class="card-body">
+                                <h4 class="card-title">Tibetan Beef w/Blue Cheese, Tomato, Jalapeño &amp; Brown Rice</h4>
+                                <p class="card-text">Good luck finding a description for this haha.</p>
+                            </div>
+                            <div class="card-footer meat text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-drumstick-bite"></i> Meat</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/Healthy-Cream-of-Tomato-Soup.jpg"
+                                alt="Tomato Soup">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Tomato w/Mascarpone Cheese</h4>
+                                <p class="card-text">Juicy-ripe tomatoes, caramelized onions, basil, sea salt and a touch of parmesan and romano cheeses blended with light cream.</p>
+                            </div>
+                            <div class="card-footer vegetarian text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-carrot"></i> Vegetarian</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="vegan" role="tabpanel">
+                    <div class="card-columns">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/African-Peanut-Soup-34.jpg"
+                                alt="African Peanut">
+                            <div class="card-body">
+                                <h4 class="card-title">African Peanut</h4>
+                                <p class="card-text">This authentic West African peanut soup recipe is made with simple ingredients like peanut butter and tomato paste.</p>
+                            </div>
+                            <div class="card-footer vegan text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-leaf"></i> Vegan</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/African-Peanut-Soup-34.jpg"
+                                alt="African Peanut">
+                            <div class="card-body">
+                                <h4 class="card-title">African Peanut</h4>
+                                <p class="card-text">This authentic West African peanut soup recipe is made with simple ingredients like peanut butter and tomato paste.</p>
+                            </div>
+                            <div class="card-footer vegan text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-leaf"></i> Vegan</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/African-Peanut-Soup-34.jpg"
+                                alt="African Peanut">
+                            <div class="card-body">
+                                <h4 class="card-title">African Peanut</h4>
+                                <p class="card-text">This authentic West African peanut soup recipe is made with simple ingredients like peanut butter and tomato paste.</p>
+                            </div>
+                            <div class="card-footer vegan text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-leaf"></i> Vegan</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/African-Peanut-Soup-34.jpg"
+                                alt="African Peanut">
+                            <div class="card-body">
+                                <h4 class="card-title">African Peanut</h4>
+                                <p class="card-text">This authentic West African peanut soup recipe is made with simple ingredients like peanut butter and tomato paste.</p>
+                            </div>
+                            <div class="card-footer vegan text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-leaf"></i> Vegan</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/African-Peanut-Soup-34.jpg"
+                                alt="African Peanut">
+                            <div class="card-body">
+                                <h4 class="card-title">African Peanut</h4>
+                                <p class="card-text">This authentic West African peanut soup recipe is made with simple ingredients like peanut butter and tomato paste.</p>
+                            </div>
+                            <div class="card-footer vegan text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-leaf"></i> Vegan</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/African-Peanut-Soup-34.jpg"
+                                alt="African Peanut">
+                            <div class="card-body">
+                                <h4 class="card-title">African Peanut</h4>
+                                <p class="card-text">This authentic West African peanut soup recipe is made with simple ingredients like peanut butter and tomato paste.</p>
+                            </div>
+                            <div class="card-footer vegan text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-leaf"></i> Vegan</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/African-Peanut-Soup-34.jpg"
+                                alt="African Peanut">
+                            <div class="card-body">
+                                <h4 class="card-title">African Peanut</h4>
+                                <p class="card-text">This authentic West African peanut soup recipe is made with simple ingredients like peanut butter and tomato paste.</p>
+                            </div>
+                            <div class="card-footer vegan text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-leaf"></i> Vegan</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/African-Peanut-Soup-34.jpg"
+                                alt="African Peanut">
+                            <div class="card-body">
+                                <h4 class="card-title">African Peanut</h4>
+                                <p class="card-text">This authentic West African peanut soup recipe is made with simple ingredients like peanut butter and tomato paste.</p>
+                            </div>
+                            <div class="card-footer vegan text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-leaf"></i> Vegan</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="vegetarian" role="tabpanel">
+                    <div class="card-columns">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/Healthy-Cream-of-Tomato-Soup.jpg"
+                                alt="Tomato Soup">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Tomato w/Mascarpone Cheese</h4>
+                                <p class="card-text">Juicy-ripe tomatoes, caramelized onions, basil, sea salt and a touch of parmesan and romano cheeses blended with light cream.</p>
+                            </div>
+                            <div class="card-footer vegetarian text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-carrot"></i> Vegetarian</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/Healthy-Cream-of-Tomato-Soup.jpg"
+                                alt="Tomato Soup">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Tomato w/Mascarpone Cheese</h4>
+                                <p class="card-text">Juicy-ripe tomatoes, caramelized onions, basil, sea salt and a touch of parmesan and romano cheeses blended with light cream.</p>
+                            </div>
+                            <div class="card-footer vegetarian text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-carrot"></i> Vegetarian</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/Healthy-Cream-of-Tomato-Soup.jpg"
+                                alt="Tomato Soup">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Tomato w/Mascarpone Cheese</h4>
+                                <p class="card-text">Juicy-ripe tomatoes, caramelized onions, basil, sea salt and a touch of parmesan and romano cheeses blended with light cream.</p>
+                            </div>
+                            <div class="card-footer vegetarian text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-carrot"></i> Vegetarian</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/Healthy-Cream-of-Tomato-Soup.jpg"
+                                alt="Tomato Soup">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Tomato w/Mascarpone Cheese</h4>
+                                <p class="card-text">Juicy-ripe tomatoes, caramelized onions, basil, sea salt and a touch of parmesan and romano cheeses blended with light cream.</p>
+                            </div>
+                            <div class="card-footer vegetarian text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-carrot"></i> Vegetarian</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/Healthy-Cream-of-Tomato-Soup.jpg"
+                                alt="Tomato Soup">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Tomato w/Mascarpone Cheese</h4>
+                                <p class="card-text">Juicy-ripe tomatoes, caramelized onions, basil, sea salt and a touch of parmesan and romano cheeses blended with light cream.</p>
+                            </div>
+                            <div class="card-footer vegetarian text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-carrot"></i> Vegetarian</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/Healthy-Cream-of-Tomato-Soup.jpg"
+                                alt="Tomato Soup">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Tomato w/Mascarpone Cheese</h4>
+                                <p class="card-text">Juicy-ripe tomatoes, caramelized onions, basil, sea salt and a touch of parmesan and romano cheeses blended with light cream.</p>
+                            </div>
+                            <div class="card-footer vegetarian text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-carrot"></i> Vegetarian</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/Healthy-Cream-of-Tomato-Soup.jpg"
+                                alt="Tomato Soup">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Tomato w/Mascarpone Cheese</h4>
+                                <p class="card-text">Juicy-ripe tomatoes, caramelized onions, basil, sea salt and a touch of parmesan and romano cheeses blended with light cream.</p>
+                            </div>
+                            <div class="card-footer vegetarian text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-carrot"></i> Vegetarian</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/Healthy-Cream-of-Tomato-Soup.jpg"
+                                alt="Tomato Soup">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Tomato w/Mascarpone Cheese</h4>
+                                <p class="card-text">Juicy-ripe tomatoes, caramelized onions, basil, sea salt and a touch of parmesan and romano cheeses blended with light cream.</p>
+                            </div>
+                            <div class="card-footer vegetarian text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-carrot"></i> Vegetarian</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="meat" role="tabpanel">
+                    <div class="card-columns">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/tibetan-beef.jpeg"
+                                alt="Tibetan Beef">
+                            <div class="card-body">
+                                <h4 class="card-title">Tibetan Beef w/Blue Cheese, Tomato, Jalapeño &amp; Brown Rice</h4>
+                                <p class="card-text">Good luck finding a description for this haha.</p>
+                            </div>
+                            <div class="card-footer meat text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-drumstick-bite"></i> Meat</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/tibetan-beef.jpeg"
+                                alt="Tibetan Beef">
+                            <div class="card-body">
+                                <h4 class="card-title">Tibetan Beef w/Blue Cheese, Tomato, Jalapeño &amp; Brown Rice</h4>
+                                <p class="card-text">Good luck finding a description for this haha.</p>
+                            </div>
+                            <div class="card-footer meat text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-drumstick-bite"></i> Meat</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/tibetan-beef.jpeg"
+                                alt="Tibetan Beef">
+                            <div class="card-body">
+                                <h4 class="card-title">Tibetan Beef w/Blue Cheese, Tomato, Jalapeño &amp; Brown Rice</h4>
+                                <p class="card-text">Good luck finding a description for this haha.</p>
+                            </div>
+                            <div class="card-footer meat text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-drumstick-bite"></i> Meat</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/tibetan-beef.jpeg"
+                                alt="Tibetan Beef">
+                            <div class="card-body">
+                                <h4 class="card-title">Tibetan Beef w/Blue Cheese, Tomato, Jalapeño &amp; Brown Rice</h4>
+                                <p class="card-text">Good luck finding a description for this haha.</p>
+                            </div>
+                            <div class="card-footer meat text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-drumstick-bite"></i> Meat</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/tibetan-beef.jpeg"
+                                alt="Tibetan Beef">
+                            <div class="card-body">
+                                <h4 class="card-title">Tibetan Beef w/Blue Cheese, Tomato, Jalapeño &amp; Brown Rice</h4>
+                                <p class="card-text">Good luck finding a description for this haha.</p>
+                            </div>
+                            <div class="card-footer meat text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-drumstick-bite"></i> Meat</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/tibetan-beef.jpeg"
+                                alt="Tibetan Beef">
+                            <div class="card-body">
+                                <h4 class="card-title">Tibetan Beef w/Blue Cheese, Tomato, Jalapeño &amp; Brown Rice</h4>
+                                <p class="card-text">Good luck finding a description for this haha.</p>
+                            </div>
+                            <div class="card-footer meat text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-drumstick-bite"></i> Meat</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/tibetan-beef.jpeg"
+                                alt="Tibetan Beef">
+                            <div class="card-body">
+                                <h4 class="card-title">Tibetan Beef w/Blue Cheese, Tomato, Jalapeño &amp; Brown Rice</h4>
+                                <p class="card-text">Good luck finding a description for this haha.</p>
+                            </div>
+                            <div class="card-footer meat text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-drumstick-bite"></i> Meat</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/tibetan-beef.jpeg"
+                                alt="Tibetan Beef">
+                            <div class="card-body">
+                                <h4 class="card-title">Tibetan Beef w/Blue Cheese, Tomato, Jalapeño &amp; Brown Rice</h4>
+                                <p class="card-text">Good luck finding a description for this haha.</p>
+                            </div>
+                            <div class="card-footer meat text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-drumstick-bite"></i> Meat</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="seafood" role="tabpanel">
+                    <div class="card-columns">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/cream-of-crab.jpg"
+                                alt="Cream of Crab">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Crab</h4>
+                                <p class="card-text">This rich and delicately seasoned soup is impressive with its delectable morsels of crabmeat.</p>
+                            </div>
+                            <div class="card-footer seafood text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-fish"></i> Seafood</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/cream-of-crab.jpg"
+                                alt="Cream of Crab">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Crab</h4>
+                                <p class="card-text">This rich and delicately seasoned soup is impressive with its delectable morsels of crabmeat.</p>
+                            </div>
+                            <div class="card-footer seafood text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-fish"></i> Seafood</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/cream-of-crab.jpg"
+                                alt="Cream of Crab">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Crab</h4>
+                                <p class="card-text">This rich and delicately seasoned soup is impressive with its delectable morsels of crabmeat.</p>
+                            </div>
+                            <div class="card-footer seafood text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-fish"></i> Seafood</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/cream-of-crab.jpg"
+                                alt="Cream of Crab">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Crab</h4>
+                                <p class="card-text">This rich and delicately seasoned soup is impressive with its delectable morsels of crabmeat.</p>
+                            </div>
+                            <div class="card-footer seafood text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-fish"></i> Seafood</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/cream-of-crab.jpg"
+                                alt="Cream of Crab">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Crab</h4>
+                                <p class="card-text">This rich and delicately seasoned soup is impressive with its delectable morsels of crabmeat.</p>
+                            </div>
+                            <div class="card-footer seafood text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-fish"></i> Seafood</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/cream-of-crab.jpg"
+                                alt="Cream of Crab">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Crab</h4>
+                                <p class="card-text">This rich and delicately seasoned soup is impressive with its delectable morsels of crabmeat.</p>
+                            </div>
+                            <div class="card-footer seafood text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-fish"></i> Seafood</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/cream-of-crab.jpg"
+                                alt="Cream of Crab">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Crab</h4>
+                                <p class="card-text">This rich and delicately seasoned soup is impressive with its delectable morsels of crabmeat.</p>
+                            </div>
+                            <div class="card-footer seafood text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-fish"></i> Seafood</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/cream-of-crab.jpg"
+                                alt="Cream of Crab">
+                            <div class="card-body">
+                                <h4 class="card-title">Cream of Crab</h4>
+                                <p class="card-text">This rich and delicately seasoned soup is impressive with its delectable morsels of crabmeat.</p>
+                            </div>
+                            <div class="card-footer seafood text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong><i class="fas fa-fish"></i> Seafood</strong>
+                                    </div>
+                                    <div class="col text-right text-dark">
+                                        <p class="card-text"><small>375 Cal.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-0 pt-4">
+        <div class="container-fluid">
+            <div class="row align-items-start">
+                <div class="col-12 col-md-4">
+                    <div class="row">
+                        <div class="col-10 offset-2 offset-md-0 col-md-12 d-flex">
+                            <div class="mx-md-auto">
+                                <h4><i class="fa fa-clock-o"></i> Hours</h4>
+                                <ul class="list-unstyled">
+                                    <li><strong>Daily:</strong> 11am - 6pm</li>
+                                    <li><strong>Weekend:</strong> 12pm - 6pm</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="row">
+                        <div class="col-10 offset-2 offset-md-0 col-md-12 d-flex">
+                            <div class="mx-md-auto">
+                                <h4><i class="fa fa-map-o"></i> Location</h4>
+                                <p>Mount Vernon<br>
+                                    11 W. Preston St.<br>
+                                    Baltimore MD, 21201</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="row">
+                        <div class="col-10 offset-2 offset-md-0 col-md-12 d-flex">
+                            <div class="mx-md-auto">
+                                <h4><i class="fa fa-address-card-o"></i> Contact</h4>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa fa-phone"></i> 410-528-1003</li>
+                                    <li><i class="fa fa-envelope-o"></i> soupsonmaryland@gmail.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--JQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins-->
+    <!-- build:js js/main.js -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>
