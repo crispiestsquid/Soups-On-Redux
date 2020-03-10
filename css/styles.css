@@ -12,6 +12,20 @@ body {
   font-family: "Roboto";
   background: linear-gradient(90deg, #ffe19d 0%, #fff5af 53%, #fff3cb 100%); }
 
+.about {
+  background: linear-gradient(90deg, #156900 0%, #01bd08 53%, #65ff00 100%); }
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 40%;
+  bottom: auto; }
+
+.modal-header {
+  background: linear-gradient(90deg, #156900 0%, #01bd08 53%, #65ff00 100%); }
+
+.modal-body {
+  background: linear-gradient(90deg, #ffe19d 0%, #fff5af 53%, #fff3cb 100%); }
+
 h1, h2, h3, h4 {
   font-family: "Bree Serif"; }
 

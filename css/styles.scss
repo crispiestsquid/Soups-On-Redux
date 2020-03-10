@@ -2,6 +2,7 @@ $blue-gradient: linear-gradient(90deg, rgba(24,155,166,1) 0%, rgba(70,255,225,1)
 $body-background: linear-gradient(90deg, rgba(255,225,157,1) 0%, rgba(255,245,175,1) 53%, rgba(255,243,203,1) 100%);
 $green-gradient: linear-gradient(90deg, rgba(21,105,0,1) 0%, rgba(1,189,8,1) 53%, rgba(101,255,0,1) 100%);
 $red-gradient: linear-gradient(90deg, rgba(147,3,3,1) 0%, rgba(198,15,1,1) 46%, rgba(255,44,0,1) 100%);
+$color-transparent-black: rgba(0, 0, 0, 0.5);
 
 #headerLogo {
     width: auto;
@@ -18,6 +19,24 @@ $red-gradient: linear-gradient(90deg, rgba(147,3,3,1) 0%, rgba(198,15,1,1) 46%, 
 
 body {
     font-family: 'Roboto', ;
+    background: $body-background;
+}
+
+.about {
+    background: $green-gradient;
+}
+
+.carousel-caption {
+    background-color: $color-transparent-black;
+    top: 40%;
+    bottom: auto;
+}
+
+.modal-header {
+    background: $green-gradient;
+}
+
+.modal-body {
     background: $body-background;
 }
 
